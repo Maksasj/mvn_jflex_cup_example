@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.compiler</groupId>
-    <artifactId>hn2c</artifactId>
+    <artifactId>example</artifactId>
     <version>0.1</version>
     <packaging>jar</packaging>
 
@@ -69,7 +69,7 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                     <outputDirectory>bin</outputDirectory>
-                    <finalName>hn2c</finalName>
+                    <finalName>example</finalName>
                     <appendAssemblyId>false</appendAssemblyId>
                 </configuration>
             </plugin>
@@ -96,14 +96,14 @@
                 <version>1.9.1</version>
                 <executions>
                     <execution>
-                        <id>generate-hn2c-scanner</id>
+                        <id>generate-example-scanner</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
                             <lexDefinitions>
-                                <lexDefinition>${project.basedir}/src/main/resources/hypnode.flex</lexDefinition>
+                                <lexDefinition>${project.basedir}/src/main/resources/example.flex</lexDefinition>
                             </lexDefinitions>
                             <verbose>true</verbose>
                             <jlex>true</jlex>
@@ -117,7 +117,7 @@
                 <version>1.3</version>
                 <executions>
                     <execution>
-                        <id>generate-hn2c-parser</id>
+                        <id>generate-example-parser</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
@@ -127,7 +127,7 @@
                     <parserName>Parser</parserName>
                     <generatedSourcesDirectory>${project.basedir}/src/main/java</generatedSourcesDirectory>
                     <cupSourceDirectory>${project.basedir}/src/main/resources</cupSourceDirectory>
-                    <cupSourceFilesFilter>hypnode\.cup</cupSourceFilesFilter>
+                    <cupSourceFilesFilter>example\.cup</cupSourceFilesFilter>
                 </configuration>
             </plugin>
         </plugins>
